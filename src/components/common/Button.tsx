@@ -2,7 +2,7 @@ import clsx from "clsx";
 import type { ButtonHTMLAttributes } from "react";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "ghost" | "outline" | "link";
+  variant?: "primary" | "ghost" | "outline" | "link" ;
   size?: "sm" | "md" | "lg";
   shadow?: "sm" | "md" | "lg";
 }
@@ -21,6 +21,7 @@ export default function Button({
   const variants = {
     primary:
       "bg-cyan-700 text-white hover:bg-cyan-600 active:bg-cyan-700 cursor-pointer",
+
     ghost:
       "hover:bg-white/10 active:bg-white/20",
     outline:

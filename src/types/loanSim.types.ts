@@ -2,7 +2,8 @@ export type EmploymentStatus =
   | "employed"
   | "self_employed"
   | "unemployed"
-  | "student";
+  | "student"
+  | '';
 
 export type LoanPurpose = 
     | 'home_improvement'
@@ -10,17 +11,17 @@ export type LoanPurpose =
     | 'debt_consolidation'
     | 'education'
     | 'other'
+    | '';
 
 export type RiskCategory =
     | 'low'
     | 'medium'
-    | 'high'
-    | 'very_high'
+    | 'high' 
+    | '';
 
 export type Score =
-    | 'good'
-    | 'great'
-    | 'excellent'
-    | 'bad'
     | 'poor'
-    | 'terrible'
+    | 'fair'
+    | 'good'
+    | 'excellent'
+    | '';

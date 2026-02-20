@@ -1,21 +1,20 @@
-import type { EmploymentStatus, LoanPurpose } from "../../types/loanSim.types";
+import type { EmploymentStatus,  LoanPurpose } from "../../types/loanSim.types";
 
-export interface PersonalInfo {
-    age: number;
+export interface PersonalInfoType {
+    age: number | '';
     employmentStatus: EmploymentStatus;
-    employmentDuration: number;
+    employmentDuration: number | '';
   }
 
-export interface FinancialInfo {
-    monthlyIncome: number;
-    monthlyExpenses: number;
-    existingDebt: number;
-    creditScore: number;
+export interface FinancialInfoType {
+    monthlyIncome: number | '';
+    monthlyExpenses: number | '';    
+    existingDebt: number | '';
+    creditScore: number | '';
 }
 
-export interface LoanDetails {
-    requestedAmount: number;
-    loanTerm: number;
+export interface LoanDetailsType {
+    requestedAmount: number | '';
+    loanTerm: number | '';
     loanPurpose: LoanPurpose;
-
 }

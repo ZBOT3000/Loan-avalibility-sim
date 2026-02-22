@@ -1,4 +1,5 @@
-import InputField from '../Common/InputField';
+import InputField from '../common/InputField';
+import type { ChangeEvent } from 'react';
 import { type FinancialInfoType } from './loanForm.types';
 
 export default function FinancialInfo({
@@ -16,27 +17,27 @@ export default function FinancialInfo({
       </h2>
       <InputField placeholder="Monthly Income" 
       currency="R"
-      value={financialInfo.monthlyIncome} onChange={(e) => {
+      value={financialInfo.monthlyIncome} onChange={(e: ChangeEvent<HTMLInputElement>) => {
         const v = e.target.value;
         if (v === '' || !isNaN(Number(v))) 
         setFinancialInfo({ ...financialInfo, monthlyIncome: v === '' ? '' : Number(v) })} 
       }/>
       <InputField placeholder="Monthly Expenses" 
       currency="R"
-      value={financialInfo.monthlyExpenses} onChange={(e) => {
+      value={financialInfo.monthlyExpenses} onChange={(e: ChangeEvent<HTMLInputElement>) => {
         const v = e.target.value;
         if (v === '' || !isNaN(Number(v))) 
         setFinancialInfo({ ...financialInfo, monthlyExpenses: v === '' ? '' : Number(v) })} 
       }/>
       <InputField placeholder="Existing Debt" 
       currency="R"
-      value={financialInfo.existingDebt} onChange={(e) => {
+      value={financialInfo.existingDebt} onChange={(e: ChangeEvent<HTMLInputElement>) => {
         const v = e.target.value;
         if (v === '' || !isNaN(Number(v))) 
         setFinancialInfo({ ...financialInfo, existingDebt: v === '' ? '' : Number(v) })} 
       }/>
       <InputField placeholder="Credit Score" 
-      value={financialInfo.creditScore} onChange={(e) => {
+      value={financialInfo.creditScore} onChange={(e: ChangeEvent<HTMLInputElement>) => {
         const v = e.target.value;
         if (v === '' || !isNaN(Number(v))) 
         setFinancialInfo({ ...financialInfo, creditScore: v === '' ? '' : Number(v) })} 

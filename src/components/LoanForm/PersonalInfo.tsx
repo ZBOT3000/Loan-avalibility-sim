@@ -1,5 +1,6 @@
-import InputField from '../Common/InputField';
-import SelectField from '../Common/SelectField';
+import InputField from '../common/InputField';
+import SelectField from '../common/SelectField';
+import type { ChangeEvent } from 'react';
 import type { EmploymentStatus } from '../../types/loanSim.types';
 import type { PersonalInfoType } from './loanForm.types';
 
@@ -28,7 +29,7 @@ export default function PersonalInfo({
       <InputField 
       placeholder="Age" 
       value={personalInfo.age}
-      onChange={(e) => {
+      onChange={(e: ChangeEvent<HTMLInputElement>) => {
         const v = e.target.value;
         if (v === '' || !isNaN(Number(v))) 
         setPersonalInfo({ ...personalInfo, age: v === '' ? '' : Number(v) })}}
@@ -36,14 +37,14 @@ export default function PersonalInfo({
       <SelectField
         label="Employment Status"
         value={personalInfo.employmentStatus}
-        onChange={(e) => setPersonalInfo({ ...personalInfo, employmentStatus: e.target.value as EmploymentStatus })}
+        onChange={(e: ChangeEvent<HTMLSelectElement>) => setPersonalInfo({ ...personalInfo, employmentStatus: e.target.value as EmploymentStatus })}
         options={employmentStatusOptions}
       />
 
       <InputField
         placeholder="Employment Duration (in months)"
         value={personalInfo.employmentDuration}
-        onChange={(e) => {
+        onChange={(e: ChangeEvent<HTMLInputElement>) => {
             const v = e.target.value;
             if (v === '' || !isNaN(Number(v))) 
             setPersonalInfo({ ...personalInfo, employmentDuration: v === '' ? '' : Number(v) })}}

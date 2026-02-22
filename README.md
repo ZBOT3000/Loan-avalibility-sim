@@ -24,8 +24,9 @@ Users can input personal, financial, and loan details to receive a structured el
 ## Run locally
 
 1. Install dependencies - npm install
-2. Start development server - npm run dev
-3. Open - http://localhost:5173
+2. Build project - npm run build
+3. Start development server - npm run dev
+4. Open - http://localhost:5173
 
 ## Running with Docker
 

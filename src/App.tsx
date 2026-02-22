@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from './components/Common/Button';
+import Button from './components/common/Button';
 import PersonalInfo from './components/LoanForm/PersonalInfo';
 import FinancialInfo from './components/LoanForm/FinancialInfo';
 import LoanDetails from './components/LoanForm/LoanDetails';

@@ -45,11 +45,11 @@ describe("parseFinancials", () => {
 
 describe("calcDisposableIncome", () => {
   it("returns income minus expenses and debt", () => {
-    expect(calcDisposableIncome(30000, 10000, 5000)).toBe(15000);
+    expect(calcDisposableIncome(30000, 10000)).toBe(15000);
   });
 
   it("can return a negative value", () => {
-    expect(calcDisposableIncome(5000, 8000, 3000)).toBe(-6000);
+    expect(calcDisposableIncome(5000, 8000)).toBe(-6000);
   });
 });
 

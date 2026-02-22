@@ -1,5 +1,6 @@
-import InputField from '../Common/InputField';
-import SelectField from '../Common/SelectField';
+import InputField from '../common/InputField';
+import SelectField from '../common/SelectField';
+import type { ChangeEvent } from 'react';
 import type { LoanDetailsType  } from './loanForm.types';
 import type { LoanPurpose } from '../../types/loanSim.types';
 
@@ -30,16 +31,16 @@ export default function LoanDetails({
       placeholder="Requested Amount" 
       currency="R"
       value={loanDetails.requestedAmount}
-      onChange={(e) => { const v = e.target.value; if (v === '' || !isNaN(Number(v))) setLoanDetails({ ...loanDetails, requestedAmount: v === '' ? '' : Number(v) }); }}
+      onChange={(e: ChangeEvent<HTMLInputElement>) => { const v = e.target.value; if (v === '' || !isNaN(Number(v))) setLoanDetails({ ...loanDetails, requestedAmount: v === '' ? '' : Number(v) }); }}
       />
       <InputField placeholder="Loan Term (months)" 
       value={loanDetails.loanTerm}
-      onChange={(e) => { const v = e.target.value; if (v === '' || !isNaN(Number(v))) setLoanDetails({ ...loanDetails, loanTerm: v === '' ? '' : Number(v) }); }}
+      onChange={(e: ChangeEvent<HTMLInputElement>) => { const v = e.target.value; if (v === '' || !isNaN(Number(v))) setLoanDetails({ ...loanDetails, loanTerm: v === '' ? '' : Number(v) }); }}
       />
       <SelectField
         label="Loan Purpose"
         value={loanDetails.loanPurpose}
-        onChange={(e) => setLoanDetails({ ...loanDetails, loanPurpose: e.target.value as LoanPurpose })}
+        onChange={(e: ChangeEvent<HTMLSelectElement>) => setLoanDetails({ ...loanDetails, loanPurpose: e.target.value as LoanPurpose })}
         options={loanPurposeOptions}
       />
     </section>
